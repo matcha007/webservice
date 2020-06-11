@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://impl.service.dsx.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://service.dsx.com/" name="UserServiceImplService" targetNamespace="http://impl.service.dsx.com/">
+  <wsdl:import location="http://localhost:8080/ws/user?wsdl=UserService.wsdl" namespace="http://service.dsx.com/">
+    </wsdl:import>
+  <wsdl:binding name="UserServiceImplServiceSoapBinding" type="ns1:UserService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="finUserById">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="finUserById">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="finUserByIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveUser">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="saveUser">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="saveUserResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAllUsers">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findAllUsers">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findAllUsersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteUser">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="deleteUser">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="deleteUserResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateUser">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updateUser">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateUserResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UserServiceImplService">
+    <wsdl:port binding="tns:UserServiceImplServiceSoapBinding" name="UserServiceImplPort">
+      <soap:address location="http://localhost:8080/ws/user"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
